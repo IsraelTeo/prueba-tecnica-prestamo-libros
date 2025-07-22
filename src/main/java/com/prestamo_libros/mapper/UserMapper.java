@@ -1,6 +1,7 @@
 package com.prestamo_libros.mapper;
 
 import com.prestamo_libros.dto.user.UserRequestDTO;
+import com.prestamo_libros.dto.user.UserResponseDTO;
 import com.prestamo_libros.model.UserEntity;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,13 @@ public class UserMapper {
                 .name(request.name())
                 .lastName(request.lastName())
                 .dni(request.dni())
+                .build();
+    }
+
+    public UserResponseDTO userToResponse(UserEntity user){
+        return UserResponseDTO.builder()
+                .fullName(user.getName() + user.getLastName())
+                .dni(user.getDni())
                 .build();
     }
 }
