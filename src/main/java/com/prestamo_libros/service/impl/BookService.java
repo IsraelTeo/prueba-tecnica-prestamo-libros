@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class BookService implements IBookService {
 
-    private IBookRepository bookRepository;
+    private final IBookRepository bookRepository;
 
-    private BookMapper bookMapper;
+    private final BookMapper bookMapper;
 
     @Transactional
     @Override
