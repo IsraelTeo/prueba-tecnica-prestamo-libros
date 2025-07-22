@@ -2,7 +2,6 @@ package com.prestamo_libros.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
 @Entity
 @Getter
@@ -12,21 +11,20 @@ import lombok.experimental.FieldDefaults;
 @EqualsAndHashCode
 @ToString
 @Builder
-@FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "users")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column(nullable = false, length = 50)
-    String name;
+    private String name;
 
     @Column(name = "last_name",nullable = false, length = 80)
-    String lastName;
+    private String lastName;
 
     @Column(unique = true, nullable = false, length = 12)
-    String dni;
+    private String dni;
 
 }
