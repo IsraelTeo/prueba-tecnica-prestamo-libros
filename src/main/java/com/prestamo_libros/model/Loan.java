@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(exclude = {"books"})
 @ToString(exclude = {"books"})

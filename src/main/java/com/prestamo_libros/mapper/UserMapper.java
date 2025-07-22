@@ -18,6 +18,7 @@ public class UserMapper {
 
     public UserResponseDTO userToResponse(UserEntity user){
         return UserResponseDTO.builder()
+                .id(user.getId())
                 .fullName(user.getName() + " " + user.getLastName())
                 .dni(user.getDni())
                 .build();
