@@ -1,6 +1,7 @@
 package com.prestamo_libros.dto.book;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
 
@@ -16,6 +17,9 @@ public record BookRequestDTO(
 
         @NotBlank(message = "ISBN cannot be blank")
         @Size(max = 13, message = "ISBN must not exceed 13 characters")
-        String isbn
+        String isbn,
+
+        @NotNull(message = "Availability status must be provided")
+        Boolean available
 ) {
 }

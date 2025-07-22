@@ -27,5 +27,5 @@ public class Book {
     @Column(nullable = false, unique = true, length = 13, updatable = false)
     private String isbn; // International Standard Book Number
 
-    private boolean available;
+    private Boolean available;
 }

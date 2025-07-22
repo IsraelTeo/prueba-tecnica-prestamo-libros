@@ -8,6 +8,6 @@ public record BookResponseDTO(
         String tittle,
         String author,
         String isbn,
-        boolean available
+        Boolean available
 ) {
 }
