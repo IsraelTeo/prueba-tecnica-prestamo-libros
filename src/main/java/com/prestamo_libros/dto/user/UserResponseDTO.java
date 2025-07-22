@@ -5,9 +5,9 @@ import lombok.Builder;
 
 @Builder
 public record UserResponseDTO(
+        Long id,
         @JsonProperty("full_name")
         String fullName,
-
         String dni
 ) {
 }
