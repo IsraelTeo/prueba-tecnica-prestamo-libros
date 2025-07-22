@@ -41,6 +41,8 @@ public class Loan {
     )
     private List<Book> books;
 
+    private boolean returned;
+
     private LocalDate loanDate;
 
     private LocalDate returnDate;
