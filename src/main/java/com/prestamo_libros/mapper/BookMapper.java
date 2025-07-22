@@ -13,7 +13,7 @@ public class BookMapper {
                 .tittle(request.tittle())
                 .author(request.author())
                 .isbn(request.isbn())
-                .available(request.available()) // Default value for new books
+                .available(request.available())
                 .build();
     }
 
